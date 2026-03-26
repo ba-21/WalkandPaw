@@ -1,0 +1,21 @@
+{
+  "_comment": "Hero header copy and contact links.",
+  "logoAlt": "Walk'n Paw Logo",
+  "eyebrow": "Hundeausführservice",
+  "headline": "von Liane Wille",
+  "brandName": "Walk'n Paw",
+  "phone": {
+    "_comment": "Display value is shown, tel is used in the href.",
+    "display": "0178 / 231 347 1",
+    "tel": "01782313471",
+    "ariaLabel": "Telefon 0178 231 347 1"
+  },
+  "cta": "Kostenloser Kennenlernspaziergang",
+  "location": {
+    "_comment": "Icon labels and social link for the location row.",
+    "name": "Magdeburg",
+    "emailAriaLabel": "E-Mail",
+    "instagramAriaLabel": "Instagram",
+    "instagramUrl": "https://www.instagram.com/walknpaw"
+  }
+}

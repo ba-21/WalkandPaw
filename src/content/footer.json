@@ -1,0 +1,23 @@
+{
+  "_comment": "Footer links, tooltips, and labels.",
+  "phone": {
+    "tel": "01782313471",
+    "ariaLabel": "Telefon",
+    "tooltip": "0178 / 231 347 1"
+  },
+  "email": {
+    "ariaLabel": "E-Mail",
+    "tooltip": "walkandpaw@gmail.com"
+  },
+  "instagram": {
+    "url": "https://www.instagram.com/walknpaw",
+    "ariaLabel": "Instagram",
+    "tooltip": "instagram.com/walknpaw"
+  },
+  "legal": {
+    "_comment": "Footer legal links.",
+    "impressumLabel": "Impressum",
+    "agbLabel": "AGB"
+  },
+  "copyright": "Walk'n Paw"
+}

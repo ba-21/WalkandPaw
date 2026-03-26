@@ -1,0 +1,9 @@
+{
+  "_comment": "Map modal title and image metadata.",
+  "title": "Magdeburg",
+  "closeLabel": "Schliessen",
+  "image": {
+    "src": "/assets/images/Magdeburg-960.jpg",
+    "alt": "Karte von Magdeburg für den professionellen Hundeausführservice Walk'n Paw."
+  }
+}

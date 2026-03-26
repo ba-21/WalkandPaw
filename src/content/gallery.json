@@ -1,0 +1,26 @@
+{
+  "_comment": "Gallery images, optional labels, and layout classes.",
+  "images": [
+    {
+      "src": "/assets/images/dogWalking/dogWalking_01.jpeg",
+      "alt": "Professional, individual dog walking relationship and premium service in Magdeburg.",
+      "className": "tall"
+    },
+    {
+      "src": "/assets/images/dogWalking/dogWalking_02.jpeg",
+      "alt": "Individual dog walking service building a trusted relationship in Magdeburg.",
+      "className": "tall"
+    },
+    {
+      "src": "/assets/images/dogWalking/dogWalking_03.jpeg",
+      "alt": "Premium dog walking service with professional care for active dogs.",
+      "className": "tall"
+    },
+    {
+      "src": "/assets/images/dogWalking/dogWalking_04.jpeg",
+      "alt": "Happy dogs after a professional dog walking service in Magdeburg.",
+      "className": "no-crop narrow",
+      "label": "We Love It !"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "_comment": "About section copy and image assets.",
+  "title": "Hundeausführservice",
+  "subtitle": "Tätigkeitsbereich",
+  "map": {
+    "_comment": "Map image shown in the about tile.",
+    "image": "/assets/images/Magdeburg-960.jpg",
+    "alt": "Karte von Magdeburg für den professionellen Hundeausführservice Walk'n Paw.",
+    "buttonLabel": "Karte von Magdeburg vergrößern"
+  },
+  "portrait": {
+    "_comment": "Portrait image shown in the about tile.",
+    "image": "/assets/images/aboutMeImage-512.jpg",
+    "alt": "Liane Wille, professionelle Hundeausführerin mit individueller Betreuung."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_comment": "Package cards and pricing notes.",
+  "title": "Pakete",
+  "packages": [
+    {
+      "title": "Paket 1",
+      "subtitle": "Stempelkarte (5 Walks)",
+      "price": "25€ pro Walk"
+    },
+    {
+      "title": "Paket 2",
+      "subtitle": "Einzelbuchung",
+      "price": "30€ pro Walk"
+    }
+  ],
+  "notes": [
+    "Ein Walk entspricht eine Stunde inkl. Hol- und Bringservice.",
+    "0,40€/km Anfahrtpauschale außerhalb von Magdeburg",
+    "Absagefrist spätestens 24 Stunden, aber am besten so früh wie möglich."
+  ]
+}

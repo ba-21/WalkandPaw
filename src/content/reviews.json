@@ -1,0 +1,23 @@
+{
+  "_comment": "Customer reviews and rating label.",
+  "title": "Kundenstimmen",
+  "ratingLabel": "5 von 5 Pfoten",
+  "items": [
+    {
+      "text": "Absolut zuverlässig und liebevoll im Umgang mit Hunden.",
+      "author": "Anna K."
+    },
+    {
+      "text": "Unser Hund freut sich jedes Mal riesig auf den Spaziergang.",
+      "author": "Ben M."
+    },
+    {
+      "text": "Super freundlich, flexibel und immer pünktlich.",
+      "author": "Carla S."
+    },
+    {
+      "text": "Sehr professionell und unsere Hündin ist glücklich.",
+      "author": "David L."
+    }
+  ]
+}

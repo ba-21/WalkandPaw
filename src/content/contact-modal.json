@@ -1,0 +1,39 @@
+{
+  "_comment": "Contact modal strings and form configuration.",
+  "title": "Kennenlernspaziergang anfragen",
+  "closeLabel": "Schliessen",
+  "form": {
+    "_comment": "Form submit target and field metadata.",
+    "action": "https://formsubmit.co/walkandpaw@gmail.com",
+    "subject": "Neue Anfrage von Walk'n Paw",
+    "honeyField": "_honey",
+    "fields": [
+      {
+        "label": "Name",
+        "name": "name",
+        "type": "text",
+        "placeholder": "Ihr Name",
+        "required": true
+      },
+      {
+        "label": "E-Mail",
+        "name": "email",
+        "type": "email",
+        "placeholder": "name@email.de",
+        "required": true
+      },
+      {
+        "label": "Nachricht",
+        "name": "message",
+        "type": "textarea",
+        "rows": 4,
+        "placeholder": "Erzaehlen Sie kurz von Ihrem Hund.",
+        "required": true
+      }
+    ],
+    "buttons": {
+      "cancel": "Abbrechen",
+      "submit": "Anfrage senden"
+    }
+  }
+}
