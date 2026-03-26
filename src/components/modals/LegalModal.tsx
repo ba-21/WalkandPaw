@@ -7,33 +7,26 @@ type LegalModalProps = {
   onClose: () => void
 }
 
-type LegalSegment = string | { link: { href: string; text: string } }
+type LegalLink = {
+  href: string
+  text: string
+}
+
+type LegalParagraph = {
+  text: string
+  link?: LegalLink
+  suffix?: string
+}
 
 type LegalSection = {
   title: string
-  paragraphs: LegalSegment[][]
+  paragraphs: LegalParagraph[]
 }
 
 type LegalContent = {
   title: string
   closeLabel: string
   sections: LegalSection[]
-}
-
-const renderSegment = (segment: LegalSegment, key: string) => {
-  if (typeof segment === 'string') {
-    return <span key={key}>{segment}</span>
-  }
-
-  if ('link' in segment) {
-    return (
-      <a key={key} href={segment.link.href} target="_blank" rel="noreferrer">
-        {segment.link.text}
-      </a>
-    )
-  }
-
-  return null
 }
 
 export function LegalModal({ active, onClose }: LegalModalProps) {
@@ -55,13 +48,22 @@ export function LegalModal({ active, onClose }: LegalModalProps) {
         {content.sections.map((section) => (
           <section className="legal-section" key={section.title}>
             <h3>{section.title}</h3>
-            {section.paragraphs.map((paragraph, paragraphIndex) => (
-              <p key={`${section.title}-${paragraphIndex}`}>
-                {paragraph.map((segment, segmentIndex) =>
-                  renderSegment(segment, `${section.title}-${paragraphIndex}-${segmentIndex}`)
-                )}
-              </p>
-            ))}
+            {section.paragraphs.map((paragraph, paragraphIndex) => {
+              const hasLink = Boolean(paragraph.link?.href && paragraph.link?.text)
+              const hasSuffix = Boolean(paragraph.suffix)
+
+              return (
+                <p key={`${section.title}-${paragraphIndex}`}>
+                  {paragraph.text}
+                  {hasLink ? (
+                    <a href={paragraph.link?.href} target="_blank" rel="noreferrer">
+                      {paragraph.link?.text}
+                    </a>
+                  ) : null}
+                  {hasSuffix ? paragraph.suffix : null}
+                </p>
+              )
+            })}
           </section>
         ))}
       </div>
