@@ -1,0 +1,402 @@
+media:
+  input: public/assets/images
+  output: /assets/images
+
+content:
+  - name: marketing-site
+    label: Marketing Site
+    type: group
+    items:
+      - name: sections
+        label: Sections
+        type: group
+        items:
+          - name: hero
+            label: Hero
+            type: file
+            path: src/content/hero.json
+            format: json
+            fields:
+              - name: logoAlt
+                label: Logo alt text
+                type: string
+              - name: eyebrow
+                type: string
+              - name: headline
+                type: string
+              - name: brandName
+                label: Brand name
+                type: string
+              - name: phone
+                type: object
+                fields:
+                  - name: display
+                    label: Display value
+                    type: string
+                  - name: tel
+                    label: Tel value
+                    type: string
+                  - name: ariaLabel
+                    label: Aria label
+                    type: string
+              - name: cta
+                label: CTA label
+                type: string
+              - name: location
+                type: object
+                fields:
+                  - name: name
+                    type: string
+                  - name: emailAriaLabel
+                    label: Email aria label
+                    type: string
+                  - name: instagramAriaLabel
+                    label: Instagram aria label
+                    type: string
+                  - name: instagramUrl
+                    label: Instagram URL
+                    type: string
+          - name: welcome
+            label: Welcome
+            type: file
+            path: src/content/welcome.json
+            format: json
+            fields:
+              - name: title
+                type: string
+              - name: paragraphs
+                type: text
+                list: true
+          - name: why-dogwalking
+            label: Why Dogwalking
+            type: file
+            path: src/content/why-dogwalking.json
+            format: json
+            fields:
+              - name: title
+                type: string
+              - name: paragraphs
+                type: text
+                list: true
+          - name: individual-care
+            label: Individual Care
+            type: file
+            path: src/content/individual-care.json
+            format: json
+            fields:
+              - name: title
+                type: string
+              - name: paragraphs
+                type: text
+                list: true
+          - name: about
+            label: About
+            type: file
+            path: src/content/about.json
+            format: json
+            fields:
+              - name: title
+                type: string
+              - name: subtitle
+                type: string
+              - name: map
+                type: object
+                fields:
+                  - name: image
+                    label: Image
+                    type: image
+                  - name: alt
+                    label: Alt text
+                    type: string
+                  - name: buttonLabel
+                    label: Button label
+                    type: string
+              - name: portrait
+                type: object
+                fields:
+                  - name: image
+                    label: Image
+                    type: image
+                  - name: alt
+                    label: Alt text
+                    type: string
+          - name: gallery
+            label: Gallery
+            type: file
+            path: src/content/gallery.json
+            format: json
+            fields:
+              - name: images
+                label: Images
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{alt}"
+                fields:
+                  - name: src
+                    label: Image
+                    type: image
+                  - name: alt
+                    label: Alt text
+                    type: string
+                  - name: className
+                    label: CSS classes
+                    type: string
+                  - name: label
+                    label: Label
+                    type: string
+          - name: packages
+            label: Packages
+            type: file
+            path: src/content/packages.json
+            format: json
+            fields:
+              - name: title
+                type: string
+              - name: packages
+                label: Packages
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                fields:
+                  - name: title
+                    type: string
+                  - name: subtitle
+                    type: string
+                  - name: price
+                    type: string
+              - name: notes
+                type: text
+                list: true
+          - name: reviews
+            label: Reviews
+            type: file
+            path: src/content/reviews.json
+            format: json
+            fields:
+              - name: title
+                type: string
+              - name: ratingLabel
+                label: Rating label
+                type: string
+              - name: items
+                label: Reviews
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{author}"
+                fields:
+                  - name: text
+                    type: text
+                  - name: author
+                    type: string
+      - name: modals
+        label: Modals
+        type: group
+        items:
+          - name: contact-modal
+            label: Contact modal
+            type: file
+            path: src/content/contact-modal.json
+            format: json
+            fields:
+              - name: title
+                type: string
+              - name: closeLabel
+                label: Close label
+                type: string
+              - name: form
+                type: object
+                fields:
+                  - name: action
+                    label: Form action URL
+                    type: string
+                  - name: subject
+                    label: Email subject
+                    type: string
+                  - name: honeyField
+                    label: Honeypot field name
+                    type: string
+                  - name: fields
+                    label: Form fields
+                    type: object
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: "{label}"
+                    fields:
+                      - name: label
+                        type: string
+                      - name: name
+                        label: Field name
+                        type: string
+                      - name: type
+                        label: Field type
+                        type: select
+                        options:
+                          values: [text, email, textarea]
+                      - name: placeholder
+                        type: string
+                      - name: required
+                        type: boolean
+                      - name: rows
+                        type: number
+                  - name: buttons
+                    type: object
+                    fields:
+                      - name: cancel
+                        type: string
+                      - name: submit
+                        type: string
+          - name: map-modal
+            label: Map modal
+            type: file
+            path: src/content/map-modal.json
+            format: json
+            fields:
+              - name: title
+                type: string
+              - name: closeLabel
+                label: Close label
+                type: string
+              - name: image
+                type: object
+                fields:
+                  - name: src
+                    label: Image
+                    type: image
+                  - name: alt
+                    label: Alt text
+                    type: string
+      - name: legal
+        label: Legal
+        type: group
+        items:
+          - name: legal-impressum
+            label: Impressum
+            type: file
+            path: src/content/legal-impressum.json
+            format: json
+            fields:
+              - name: title
+                type: string
+              - name: closeLabel
+                label: Close label
+                type: string
+              - name: sections
+                label: Sections
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                fields:
+                  - name: title
+                    type: string
+                  - name: paragraphs
+                    label: Paragraphs
+                    type: object
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: "{text}"
+                    fields:
+                      - name: text
+                        type: text
+                      - name: link
+                        type: object
+                        fields:
+                          - name: href
+                            label: Link URL
+                            type: string
+                          - name: text
+                            label: Link text
+                            type: string
+                      - name: suffix
+                        type: string
+          - name: legal-agb
+            label: AGB
+            type: file
+            path: src/content/legal-agb.json
+            format: json
+            fields:
+              - name: title
+                type: string
+              - name: closeLabel
+                label: Close label
+                type: string
+              - name: sections
+                label: Sections
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                fields:
+                  - name: title
+                    type: string
+                  - name: paragraphs
+                    label: Paragraphs
+                    type: object
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: "{text}"
+                    fields:
+                      - name: text
+                        type: text
+      - name: footer
+        label: Footer
+        type: file
+        path: src/content/footer.json
+        format: json
+        fields:
+          - name: phone
+            type: object
+            fields:
+              - name: tel
+                label: Tel value
+                type: string
+              - name: ariaLabel
+                label: Aria label
+                type: string
+              - name: tooltip
+                type: string
+          - name: email
+            type: object
+            fields:
+              - name: ariaLabel
+                label: Aria label
+                type: string
+              - name: tooltip
+                type: string
+          - name: instagram
+            type: object
+            fields:
+              - name: url
+                label: URL
+                type: string
+              - name: ariaLabel
+                label: Aria label
+                type: string
+              - name: tooltip
+                type: string
+          - name: legal
+            type: object
+            fields:
+              - name: impressumLabel
+                label: Impressum label
+                type: string
+              - name: agbLabel
+                label: AGB label
+                type: string
+          - name: copyright
+            type: string
+
+settings:
+  content:
+    merge: true
