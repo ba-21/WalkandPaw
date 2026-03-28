@@ -5,7 +5,7 @@ export function GallerySection() {
   return (
     <section className="card span-12 gallery" style={withDelay(320)}>
       <div className="gallery-grid">
-        {galleryContent.images.map((image, index) => (
+        {galleryContent.images.map((image) => (
           <figure key={image.src} className={`gallery-item ${image.className ?? ''}`.trim()}>
             {image.label ? <span className="gallery-label">{image.label}</span> : null}
             <img
